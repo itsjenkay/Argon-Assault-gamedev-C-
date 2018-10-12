@@ -39,8 +39,8 @@ public class Player : MonoBehaviour {
 
     private void ProcessTranslation()
     {
-          xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-          yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
         float xOffset = xThrow * Speed * Time.deltaTime;
         float yOffset = yThrow * Speed * Time.deltaTime;
