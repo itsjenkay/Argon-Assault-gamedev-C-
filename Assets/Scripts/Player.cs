@@ -4,17 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour {
+public class Player: MonoBehaviour {
+  [Header("General-Control")]
   [Tooltip ("in ms^-1 ")][SerializeField] float Speed = 20f;
   [Tooltip ("in m ")]  [SerializeField] float xRange = 5.5f;
   [Tooltip ("in m ")]  [SerializeField] float yRange = 2.5f;
-  [SerializeField] float positionPitchFactor = -5f;
-  [SerializeField] float controlPitchFactor = -20f;
-  [SerializeField] float positionYawFactor = 5f;
-  [SerializeField] float controlRollFactor = -21.56f;
+
+  [Header("Screen Position-Controller")]
+    [SerializeField] float positionPitchFactor = -5f;
+    [SerializeField] float positionYawFactor = 5f;
+
+ [Header("Screen Control-Controller")]
+    [SerializeField] float controlPitchFactor = -20f;
+    [SerializeField] float controlRollFactor = -21.56f;
   
     float yThrow;
     float xThrow;
+    bool isControlEnable = true;
     // Use this for initialization
     void Start () {
 		
@@ -23,10 +29,24 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        ProcessTranslation();
-        processRotation();
+        if (isControlEnable == true)
+        {
+            ProcessTranslation();
+            processRotation();
+        }
+     
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        isControlEnable = false;
+        
+    }
+   void OnPlayerDeath()
+    {
+        print("This call just worked");
+
+    }
     private void processRotation()
     {
         float pitchDueToPosoition = transform.localPosition.y * positionPitchFactor;
