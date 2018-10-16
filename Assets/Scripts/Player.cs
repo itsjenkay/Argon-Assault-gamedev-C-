@@ -17,7 +17,8 @@ public class Player: MonoBehaviour {
  [Header("Screen Control-Controller")]
     [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -21.56f;
-  
+
+    
     float yThrow;
     float xThrow;
     bool isControlEnable = true;
@@ -40,13 +41,15 @@ public class Player: MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         isControlEnable = false;
-        
+    
     }
+    
    void OnPlayerDeath()
     {
         print("This call just worked");
-
     }
+    public GameObject deathFX;
+   
     private void processRotation()
     {
         float pitchDueToPosoition = transform.localPosition.y * positionPitchFactor;
