@@ -1236,6 +1236,54 @@ Prefab:
       propertyPath: DeathFX
       value: 
       objectReference: {fileID: 1818224084}
+    - target: {fileID: 1294520256113962, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6, type: 2}
+      propertyPath: m_Name
+      value: bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699618150079898, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6, type: 2}
+      propertyPath: m_Name
+      value: bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 198099532708434788, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6,
+        type: 2}
+      propertyPath: randomSeed
+      value: 2002955990
+      objectReference: {fileID: 0}
+    - target: {fileID: 198099532708434788, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6,
+        type: 2}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198581897405960860, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6,
+        type: 2}
+      propertyPath: randomSeed
+      value: 877201680
+      objectReference: {fileID: 0}
+    - target: {fileID: 198581897405960860, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6,
+        type: 2}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198099532708434788, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198581897405960860, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198099532708434788, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6,
+        type: 2}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198581897405960860, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6,
+        type: 2}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 498196d63b92b0d4ebfea3fb4f9bfdd6, type: 2}
   m_IsPrefabParent: 0
