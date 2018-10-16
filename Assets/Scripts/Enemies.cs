@@ -1,24 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemies : MonoBehaviour {
-   
-    [SerializeField] GameObject deathExplosion;
+
+    [SerializeField] GameObject deathFX;
+    [SerializeField] Transform Parent;
 	// Use this for initialization
 	void Start () {
-		
+        AddNonTriggerBoxCollider();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    private void AddNonTriggerBoxCollider()
+    {
+        Collider boxCollider = gameObject.AddComponent<BoxCollider>();
+        boxCollider.isTrigger = false;
+    }
+
     void OnParticleCollision(GameObject other)
     {
-        print("particle collided with enemy " + gameObject.name);
+        GameObject FX=  Instantiate(deathFX, transform.position, Quaternion.identity);
+        FX.transform.parent = Parent;
+       // Instantiate(deathFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
-        print("exploded");
-        deathExplosion.SetActive(true);
+    
+       
     }
 }

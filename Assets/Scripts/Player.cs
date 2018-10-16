@@ -46,9 +46,9 @@ public class Player: MonoBehaviour {
     
    void OnPlayerDeath()
     {
-        print("This call just worked");
+       
     }
-    public GameObject deathFX;
+   
    
     private void processRotation()
     {
