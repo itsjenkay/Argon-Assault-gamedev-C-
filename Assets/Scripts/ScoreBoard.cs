@@ -14,6 +14,7 @@ public class ScoreBoard : MonoBehaviour {
     }
     public void ScoreHit(int scoreIncrement)
     {
+        // i have added a commit
         score = score + scoreIncrement;
         scoreText.text = score.ToString();
       

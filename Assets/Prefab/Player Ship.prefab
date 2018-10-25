@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198099532708434788}
   - component: {fileID: 199135460665479534}
   m_Layer: 0
-  m_Name: bullet Right
+  m_Name: Gun Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 198581897405960860}
   - component: {fileID: 199845127421605256}
   m_Layer: 0
-  m_Name: bullet Left
+  m_Name: Gun Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,11 +314,13 @@ MonoBehaviour:
   Speed: 20
   xRange: 5.5
   yRange: 2.5
+  guns:
+  - {fileID: 1294520256113962}
+  - {fileID: 1699618150079898}
   positionPitchFactor: -5
   positionYawFactor: 5
   controlPitchFactor: -20
   controlRollFactor: -21.56
-  deathFX: {fileID: 0}
 --- !u!198 &198099532708434788
 ParticleSystem:
   m_ObjectHideFlags: 1
